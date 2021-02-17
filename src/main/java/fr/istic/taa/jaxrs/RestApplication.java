@@ -19,13 +19,16 @@ package fr.istic.taa.jaxrs;
 import java.util.HashSet;
 import java.util.Set;
 
+import javax.ws.rs.ApplicationPath;
 import javax.ws.rs.core.Application;
 
 import fr.istic.taa.jaxrs.rest.KanbanBoardResource;
 import fr.istic.taa.jaxrs.rest.PetResource;
+import fr.istic.taa.jaxrs.rest.SwaggerResource;
 import io.swagger.v3.jaxrs2.integration.resources.OpenApiResource;
 
-public class TestApplication extends Application {
+@ApplicationPath("/")
+public class RestApplication extends Application {
 
 
     @Override
@@ -33,9 +36,12 @@ public class TestApplication extends Application {
 
         final Set<Class<?>> clazzes = new HashSet<Class<?>>();
 
-        clazzes.add(KanbanBoardResource.class);
-        clazzes.add(PetResource.class);
+        //SWAGGER endpoints
         clazzes.add(OpenApiResource.class);
+        //Your own resources
+        clazzes.add(PetResource.class);
+        clazzes.add(KanbanBoardResource.class);
+        clazzes.add(SwaggerResource.class);
 
         return clazzes;
     }

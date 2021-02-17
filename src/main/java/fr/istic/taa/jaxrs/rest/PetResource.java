@@ -26,7 +26,7 @@ public class PetResource {
   @Consumes("application/json")
   public Response addPet(
       @Parameter(description = "Pet object that needs to be added to the store", required = true) Pet pet) {
-    // add pet
+      // add pet
     return Response.ok().entity("SUCCESS").build();
   }
 }
