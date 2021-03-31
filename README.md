@@ -13,7 +13,13 @@ Open phpMyAdmin in localhost , create :
 - a database named '**mydatabase**'
 - a user with login '**root**' and no password
 
-http://localhost:8082/api/
+Run RestServer ~ 
+App is running on the 8082 port
+
+To question the web service with Swagger : http://localhost:8082/api/
+
+I mainly worked on the user web service (get, post, put, delete).
+You can also play with user inheritance by creating an admin. 
   
 ## Student 
 Johan LE BOURSICAUD
