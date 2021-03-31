@@ -13,7 +13,8 @@ import java.util.List;
 @DiscriminatorColumn(name = "role",discriminatorType = DiscriminatorType.STRING)
 @NamedQueries({
         @NamedQuery(name = "touslesutilisateurs", query = "select u from Utilisateur u"),
-        @NamedQuery(name = "touslesutilisateursPARNOM", query = "select u from Utilisateur u where u.nom=:nom")
+        @NamedQuery(name = "touslesutilisateursPARNOM", query = "select u from Utilisateur u where u.nom=:nom"),
+        @NamedQuery(name = "touslesutilisateursADMIN", query = "select u from Admin u")
         })
 public class Utilisateur implements Serializable {
 

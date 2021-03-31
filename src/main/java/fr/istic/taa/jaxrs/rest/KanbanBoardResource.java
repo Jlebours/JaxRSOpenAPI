@@ -2,7 +2,6 @@ package fr.istic.taa.jaxrs.rest;
 
 import fr.istic.taa.jaxrs.dao.generic.KandanBoardDao;
 import fr.istic.taa.jaxrs.domain.KanbanBoard;
-import fr.istic.taa.jaxrs.domain.Pet;
 import io.swagger.v3.oas.annotations.Parameter;
 
 import javax.ws.rs.*;
