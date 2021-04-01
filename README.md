@@ -18,8 +18,19 @@ App is running on the 8082 port
 
 To question the web service with Swagger : http://localhost:8082/api/
 
-I mainly worked on the user web service (get, post, put, delete).
-You can also play with user inheritance by creating an admin. 
+## About
+J'ai principalement travaillé sur la classe utilisateur, vous pourrez ainsi exécuter des get, post, put et delete via le swagger.
+
+Vous pourrez également manipuler les admin qui héritent de l'utilisateur.
+
+J'ai globalement tenté tous les types de requêtes (classique, nommée etc.. )
+
+Je me suis arrêté à la partie utilisateur car pour terminer le tp ensuite, il s'agissait globalement de copy/past de ce que j'avais déjà fait
+que ce soit pour la partie dao, les classes (domain) en elles-mêmes et la mise en place du service web. 
+
+## Digramme de classe (en bonus)
+- Il manque juste le role de l'utilisateur
+![img.png](img.png)
   
 ## Student 
 Johan LE BOURSICAUD

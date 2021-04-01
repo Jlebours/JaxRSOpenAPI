@@ -26,12 +26,6 @@ public class KanbanBoardResource {
         return kanbanDao.getKanbanBoards();
     }
 
-    /* exemple de json à ajouter pour kanban
-    {
-        "nom":"Troisième Kanban"
-    }
-    */
-
     @POST
     @Consumes("application/json")
     public Response addKanban(
