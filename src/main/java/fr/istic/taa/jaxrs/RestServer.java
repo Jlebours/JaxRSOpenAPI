@@ -56,17 +56,36 @@ public class RestServer {
         //Creation des utilisateurs
         UtilisateurDao utiDao = new UtilisateurDao();
         Utilisateur uti1 = new Utilisateur();
-        uti1.setMail("premieruti@gmail.com");
-        uti1.setNom("Yves");
+        uti1.setMail("utilisateur1@gmail.com");
+        uti1.setNom("Jean");
         List<KanbanBoard> kanbanUti1 = new ArrayList<>();
         kanbanUti1.add(tab1);
         uti1.setListeKanbansBoard(kanbanUti1);
         utiDao.save(uti1);
-        Admin uti2 = new Admin();
-        uti2.setMail("admin@gmail.com");
+        Utilisateur uti2 = new Utilisateur();
+        uti2.setMail("utilisateur2@gmail.com");
+        uti2.setNom("Mi");
         uti2.setListeKanbansBoard(kanbanUti1);
-        uti2.setEquipe("Maintenance");
         utiDao.save(uti2);
+        Utilisateur uti3 = new Utilisateur();
+        uti3.setMail("utilisateur3@gmail.com");
+        uti3.setNom("Chel");
+        uti3.setListeKanbansBoard(kanbanUti1);
+        utiDao.save(uti3);
+
+        //Creation des admins
+        Admin admin1 = new Admin();
+        admin1.setMail("admin.dev@gmail.com");
+        admin1.setNom("Nard");
+        admin1.setListeKanbansBoard(kanbanUti1);
+        admin1.setEquipe("Developpement");
+        utiDao.save(admin1);
+        Admin admin2 = new Admin();
+        admin2.setMail("admin.bigdata@gmail.com");
+        admin2.setNom("Ber");
+        admin2.setListeKanbansBoard(kanbanUti1);
+        admin2.setEquipe("Big Data");
+        utiDao.save(admin2);
 
         UndertowJaxrsServer ut = new UndertowJaxrsServer();
 
