@@ -25,11 +25,6 @@ public class UtilisateurDao extends AbstractJpaDao<String, Utilisateur> {
         return entityManager.createQuery(query, Utilisateur.class).setParameter("mail", mail).getSingleResult();
     }
 
-    public Utilisateur removeUtilisateurByMail(String mail) {
-        String query = "delete from Utilisateur u where u.mail=:mail";
-        return entityManager.createQuery(query, Utilisateur.class).setParameter("mail", mail).getSingleResult();
-    }
-
     public List<Utilisateur> getUtilisateursAdmin() {
         return entityManager.createNamedQuery("touslesutilisateursADMIN", Utilisateur.class).getResultList();
     }
